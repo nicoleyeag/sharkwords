@@ -17,19 +17,30 @@ const WORDS = [
 
 const numWrong = 0;
 
+
 // Loop over the letters in `word` and create divs.
+
 // The divs should be appended to the section with id="word-container".
 //
 // Use the following template string to create each div:
 // `<div class="letter-box ${letter}"></div>`
 //
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  for (const letter of word) {
+    
+    document.querySelector('#word-container').insertAdjacentHTML('beforeend',`<div class="letter-box ${letter}"></div>` )  }
 };
 
 // Loop over each letter in the alphabet and generate a button for each letter
 // The buttons should be appended to the section with id="letter-buttons".
 const generateLetterButtons = () => {
+  for (let letter of ALPHABET) {
+    
+    // alert(`${letter}`);
+    document.querySelector('#letter-buttons').insertAdjacentHTML('beforeend',`<button>${letter}</button>`)
+    
+  }
+
   // Replace this with your code
 };
 
